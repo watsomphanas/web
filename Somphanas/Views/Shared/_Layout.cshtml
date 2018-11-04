@@ -31,15 +31,16 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">วัดป่าโสมพนัส</a>
+        <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">
+          วัดป่าโสมพนัส
+        </a>
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li><a asp-area="" asp-controller="Home" asp-action="Index">หน้าแรก</a></li>
-          <li><a asp-area="" asp-controller="Home" asp-action="About">คอร์สปฏิบัติธรรม</a></li>
-          <li><a asp-area="" asp-controller="Home" asp-action="Contact">ข้อมูลวัด</a></li>
-          <li><a href="http://www.watsomphanas.com/">เว็บเดิม</a></li>
-          <li><a href="https://github.com/watsomphanas/web">GitHub</a></li>
+          @*<li><a asp-area="" asp-controller="Home" asp-action="Index">หน้าแรก</a></li>*@
+          <li><a asp-area="" asp-controller="Home" asp-action="Courses">คอร์สปฏิบัติธรรม</a></li>
+          <li><a asp-area="" asp-controller="Home" asp-action="Terms">ระเบียบการ</a></li>
+          <li><a asp-area="" asp-controller="Home" asp-action="Register">ลงทะเบียนสมัครเข้าคอร์ส</a></li>
         </ul>
         @*<partial name="_LoginPartial" />*@
 
@@ -69,16 +70,37 @@
     </div>
   </nav>
 
-  <partial name="_CookieConsentPartial" />
+  @*<partial name="_CookieConsentPartial" />*@
 
   <div class="container body-content">
     @RenderBody()
+  </div>
 
-    <footer class="text-center" style="font-size: 80%; margin-top: 3.5em;">
-      <div class="text-info"><strong>ศูนย์ปฏิบัติธรรมเจริญสติแบบเคลื่อนไหว วัดป่าโสมพนัส </strong></div>
-      <div class="text-muted">บ้านภูเพ็ก หมู่ 12 ต.นาหัวบ่อ อ.พรรณานิคม จ.สกลนคร 47220</div>
-      <div class="text-muted">โทรศัพท์ 042-704658</div>
-    </footer>
+  <div style="margin-top: 20px; margin-bottom: 0px; padding: 20px; background: whitesmoke; color: dimgray !important;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <div>ข้อมูลวัดและประธานสงฆ์</div>
+          <div>แนวปฏิบัติ</div>
+          <div>สื่อธรรม</div>
+
+        </div>
+        <div class="col-sm-3">
+          <div><a asp-area="" asp-controller="Home" asp-action="About">ข้อมูลวัด</a></div>
+          <div><a href="http://www.watsomphanas.com/">เว็บเดิม</a></div>
+          <div><a href="https://github.com/watsomphanas/web">GitHub</a></div>
+        </div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3"></div>
+      </div>
+
+      <footer class="text-center" style="font-size: 80%; margin-top: 3.5em;">
+        <div class="text-info"><strong>ศูนย์ปฏิบัติธรรมเจริญสติแบบเคลื่อนไหว วัดป่าโสมพนัส </strong></div>
+        <div class="text-muted">บ้านภูเพ็ก หมู่ 12 ต.นาหัวบ่อ อ.พรรณานิคม จ.สกลนคร 47220</div>
+        <div class="text-muted">โทรศัพท์ 042-704658</div>
+      </footer>
+    </div>
+
   </div>
 
   <environment include="Development">
